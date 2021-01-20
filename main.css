@@ -1,5 +1,5 @@
 body {
-    background: url(images/background.jpg) no-repeat center center fixed;
+    background: url(wallpaperflare.com_wallpaper.jpg) no-repeat center center fixed;
 }
 
 #myCanvas {
@@ -9,12 +9,28 @@ body {
 .main-h1 {
     font-family: 'Press Start 2P', cursive;
     color: #FA4A52;
+    margin-top:10px;
 }
 
 .main {
     text-align: center;
 }
+
 @font-face {
     font-family: 'Press Start 2P', cursive;
     src: url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+}
+
+.button {
+    background-color: #FA4A52;
+    color: white;
+    border: none;
+    width: 200px;
+    height: 45px;
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Press Start 2P', cursive;
+
+
 }

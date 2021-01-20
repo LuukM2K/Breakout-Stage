@@ -10,11 +10,10 @@ let brickRows = 10,
  brickOffsetLeft = 75,
  x = canvas.width / 2,
  y = canvas.height - 62,
- dx = -14,
- dy = -8,
+ dx = -2,
+ dy = -3,
  ballRadius = 10,
  Score = 0;
-
 
 paddleHeightAndWidth = {
 	width: 250,
@@ -56,6 +55,13 @@ let drawGameOver = function () {
 	ctx.fillText("Game Over, Your Score is:"+Score, 35, 525);
 };
 
+let drawRestart = function () {
+	ctx.font = "32px 'Press Start 2P'";
+	ctx.fillStyle = "#FA4A52";
+	ctx.fillText("Game Over, Your Score is:"+Score, 35, 525);
+
+};
+
 
 let move = function () {
 	if( keys[39] ) {
@@ -76,7 +82,6 @@ for( let c = 0; c < brickColumns; c++ ) {
 }
 
 function drawBricks() {
-
 	for( let c = 0; c < brickColumns; c++ ) {
 		for( let r = 0; r < brickRows; r++ ) {
 			if (bricks[c][r].status === 1) {
@@ -95,7 +100,6 @@ function drawBricks() {
 }
 
 function collisionDetection() {
-
 	for( let c=0; c<brickColumns; c++ ) {
 		for( let r=0; r<brickRows; r++ ) {
 			let b = bricks[c][r];
@@ -118,7 +122,7 @@ document.body.addEventListener("keyup", function (paddleArrows) {
 });
 
 function draw() {
-	
+
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ball();
 	paddle();
@@ -142,6 +146,7 @@ function draw() {
 		}
 		else {
 			drawGameOver();
+
 			//
 			pauze;
 		}
